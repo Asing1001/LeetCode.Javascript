@@ -1,0 +1,15 @@
+{
+ "name": "leetcode.javascript",
+ "version": "1.0.0",
+ "description": "leetcode solution in javascript",
+ "main": "index.js",
+ "author": "AndyChen <shinningstar1001@gmail.com>",
+ "license": "MIT",
+ "scripts": {
+  "test": "ava *.js -v"
+ },
+ "devDependencies": {
+  "ava": "^0.20.0"
+ },
+ "dependencies": {}
+}
