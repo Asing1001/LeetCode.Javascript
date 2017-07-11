@@ -6,7 +6,8 @@
  "author": "AndyChen <shinningstar1001@gmail.com>",
  "license": "MIT",
  "scripts": {
-  "test": "ava *.js -v"
+  "test": "ava *.js -v",
+  "test:w": "ava *.js -v --watch"
  },
  "devDependencies": {
   "ava": "^0.20.0"
