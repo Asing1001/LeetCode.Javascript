@@ -1,9 +1,6 @@
 import test from 'ava';
 
 var isValid = function (s) {
-    const parentheses = ['(', ')', '{', '}', '[', ']'];
-    const left = [];
-    const right = [];
     const arr = s.split('');
     const book = [];
     if (arr.length % 2 != 0) {
@@ -12,23 +9,23 @@ var isValid = function (s) {
 
     for (var stringIndex = 0; stringIndex < arr.length; stringIndex++) {
         let cur = arr[stringIndex];
-        let pIndex = parentheses.indexOf(cur);
-        let isLeft = pIndex % 2 === 0;
-
-        if (isLeft) {
-            left.push(cur)
-        } else {
-            right.push(cur)
+        switch (cur) {
+            case '(':
+                book.push(')');
+                break;
+            case '[':
+                book.push(']');
+                break;
+            case '{':
+                book.push('}');
+                break;
+            default:
+                if (book.length === 0 || book.pop() !== cur)
+                    return false;
         }
-        book[stringIndex] = pIndex;
     }
 
-    if (left.length !== right.length)
-        return false
-    else {
-
-    }
-    return true
+    return book.length === 0;
 };
 
 test('() is valid', t => {
@@ -55,7 +52,7 @@ test('([)] is invalid', t => {
     t.deepEqual(isValid('([)]'), false);
 });
 
-test('()[]{} is invalid', t => {
+test('()[]{} is valid', t => {
     t.deepEqual(isValid("()[]{}"), true);
 });
 
