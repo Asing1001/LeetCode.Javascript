@@ -9,3 +9,8 @@ test('bar', async t => {
 
 	t.is(await bar, 'bar');
 });
+
+function getFileName(s) {
+	s += '.js';
+	return s.toLowerCase().replace(/\s/, '').replace(/\s/g, '-')
+}
