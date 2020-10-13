@@ -1,4 +1,4 @@
-# LeetCode.Javascript [![Build Status](https://travis-ci.org/Asing1001/Angular4-CRUD.svg?branch=master)](https://travis-ci.org/Asing1001/Angular4-CRUD)
+# LeetCode.Javascript [![Build Status](https://travis-ci.org/Asing1001/LeetCode.Javascript.svg?branch=master)](https://travis-ci.org/Asing1001/LeetCode.Javascript)
 
 Solutions for leetcode problems in javascript.
 
