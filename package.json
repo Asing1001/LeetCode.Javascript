@@ -1,6 +1,9 @@
 {
  "name": "leetcode.javascript",
  "version": "1.0.0",
+ "engines": {
+   "node": "8"
+ },
  "description": "leetcode solution in javascript",
  "main": "index.js",
  "author": "AndyChen <shinningstar1001@gmail.com>",
